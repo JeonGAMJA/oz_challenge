@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=ß, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="../css/components/navbar.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="blog-navbar-switch-btn">
+      <input type="checkbox" id="blog-navbar-toggle-btn" />
+      <label for="blog-navbar-toggle-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <nav id="blog-navbar" class="blog-navbar-close">
+      <div id="blog-navbar__column">
+        <div id="blog-navbar-btn">
+          <a id="blog-navbar-home-btn" class="slide-nav-btn" href="blog.html">홈</a>
+          <div id="blog-navbar-profile">
+            <img
+              src="https://www.gimhaemall.kr/thumb/d593060f9bf1cef1b7c8c1e58464c59a/620_620_d19b55a79bc77fcd7c9e6e9811ca.jpg"
+            />
+          </div>
+        </div>
+        <div id="blog-navbar-menubox" class="slide-nav-menu">
+          <form id="blog-navbar-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" />
+          </form>
+          <ul class="blog-navbar-menu">
+            <li>about 감자전</li>
+            <li>태그</li>
+          </ul>
+          <ul class="blog-navbar-menu">
+            <li>
+              <a href="#">공부</a>
+            </li>
+            <li>회고</li>
+            <li>밥</li>
+            <li>찰칵</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <head>
+      <h1>설문조사 양식</h1>
+      <p>모든 항목에 빠짐없이 체크해주십시오.</p>
+    </head>
+    <hr />
+    <main>
+      <fieldset>
+        <legend>개인정보</legend>
+        <label>이름</label>
+        <input type="text" required />
+        <label>이메일주소</label>
+        <input type="email" required />
+      </fieldset>
+      <fieldset>
+        <legend>설문</legend>
+        <p>연령대가 어떻게 되십니까?</p>
+        <input type="radio" name="age" id="teen" />
+        <label for="teen"> 10대</label>
+        <input type="radio" name="age" id="twenty" />
+        <label for="twenty"> 20대</label>
+        <input type="radio" name="age" id="thirty" />
+        <label for="thirty">30대</label>
+        <input type="radio" name="age" id="forty" />
+        <label for="forty">40대</label>
+        <input type="radio" name="age" id="fifty" />
+        <label for="fofty">50대</label>
+        <input type="radio" name="age" id="sixty" />
+        <label for="sixty">그 외</label>
+        <p>학원을 선택할 때 가장 중요하게 생각하는 것은 무엇입니까? 모두 고르시오</p>
+        <input type="checkbox" id="location" />
+        <lavel for="location">위치</lavel>
+        <input type="checkbox" id="cost" />
+        <lavel for="cost">학원비</lavel>
+        <input type="checkbox" id="teacher" />
+        <lavel for="teacher">강사</lavel>
+        <input type="checkbox" id="facility" />
+        <lavel for="facility">시설</lavel>
+      </fieldset>
+      <fieldset>
+        <legend>기타 의견</legend>
+        <textarea></textarea>
+      </fieldset>
+      <button>제출</button>
+    </main>
+    <hr />
+    <footer>
+      <p>입력하느라 수고했습니다.</p>
+    </footer>
+    <hr />
+    <footer>
+      <strong
+        >log <br />
+        since janc 2024</strong
+      >
+    </footer>
+  </body>
+  <script src="../js/blog.js"></script>
+  <script src="https://kit.fontawesome.com/918a7c0be2.js" crossorigin="anonymous"></script>
+</html>

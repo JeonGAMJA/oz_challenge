@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>일상을 기록하다 log</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="welcome-box">
+      <div id="welcome">
+        <div id="change-background"></div>
+        <div id="welcome-greeting-box">
+          <p class="typeText">일상을 기록하다 log</p>
+        </div>
+        <button id="start-btn">나만의 log 만들기</button>
+        <section id="circle-mintgreen"></section>
+        <section id="circle-palegreen"></section>
+        <section id="circle-lavender"></section>
+        <section id="circle-goldenrod"></section>
+        <section id="circle-orange"></section>
+      </div>
+      <div id="login-box">
+        <span id="login-box-ment">log</span>
+        <div id="login-box-inputbox">
+          <form id="login-form" action="blog.html" method="get">
+            <div id="login-id" class="login-input">
+              <input type="text" name="id" required />
+              <i class="fa-regular fa-user"></i>
+              <label>아이디</label>
+            </div>
+            <div id="login-password" class="login-input">
+              <input type="password" name="password" required />
+              <i class="fa-solid fa-lock"></i>
+              <label>비밀번호</label>
+            </div>
+            <button id="login-btn">로그인</button>
+          </form>
+          <div id="login-finder__column">
+            <a>아이디 찾기</a>
+            <a>비밀번호 찾기</a>
+            <button id="login-register">회원가입</button>
+          </div>
+        </div>
+      </div>
+      <div id="register-box">
+        <span id="register-box-ment">log</span>
+        <div id="register-box-inputbox">
+          <button id="backto-login-btn"><i class="fa-solid fa-angle-right"></i></button>
+          <form id="register-form" action="blog.html" method="get">
+            <div id="register-id" class="register-input">
+              <input type="text" name="id" required />
+              <i class="fa-regular fa-user"></i>
+              <label>아이디</label>
+            </div>
+            <div id="register-password" class="register-input">
+              <input type="password" name="password" required />
+              <i class="fa-solid fa-lock"></i>
+              <label>비밀번호</label>
+            </div>
+            <div id="register-check-password" class="register-input">
+              <input type="password" name="password" required />
+              <i class="fa-solid fa-lock"></i>
+              <label>비밀번호 확인</label>
+            </div>
+            <div id="register-select__column">
+              <select
+                name="city"
+                class="register-select"
+                id=""
+                onchange="updateRegionByCity(this)"
+                required
+              >
+                <option>지역을 선택해주세요</option>
+                <option value="1">서울특별시</option>
+                <option value="2">경기도</option>
+                <option value="3">인천광역시</option>
+                <option value="4">부산광역시</option>
+                <option value="5">대구광역시</option>
+                <option value="6">광주광역시</option>
+                <option value="7">대전광역시</option>
+                <option value="8">울산광역시</option>
+                <option value="9">경상도</option>
+                <option value="10">전라도</option>
+                <option value="11">세종특별자치시</option>
+                <option value="12">충청도</option>
+                <option value="13">강원도</option>
+                <option value="14">제주특별자치도</option>
+              </select>
+              <select name="region" class="register-select" id="state">
+                <option>군/구 선택</option>
+              </select>
+            </div>
+            <button id="register-btn">회원가입</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/typing.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/region.js"></script>
+  <script src="https://kit.fontawesome.com/918a7c0be2.js" crossorigin="anonymous"></script>
+</html>

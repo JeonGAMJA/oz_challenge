@@ -1,0 +1,10 @@
+@import "reset.css";
+
+/*components*/
+@import "components/navbar.css";
+
+/*screens*/
+@import "screens/welcome.css";
+@import "screens/login.css";
+@import "screens/register.css";
+@import "screens/blog.css";
