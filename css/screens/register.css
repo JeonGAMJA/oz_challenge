@@ -9,9 +9,9 @@
 
 #register-box {
   width: 70vw;
-  height: 60vh;
+  height: 70vh;
   position: absolute;
-  top: 20vh;
+  top: 15vh;
   left: 15vw;
   display: none;
   align-items: center;
@@ -57,11 +57,11 @@
 }
 
 #register-form {
-  width: 450px;
-  height: 1000px;
+  width: 100%;
+  height: auto;
   display: flex;
-  padding-top: 80px;
   flex-direction: column;
+  overflow-y: scroll;
 }
 
 .register-input {
@@ -88,6 +88,9 @@
   margin-bottom: 20px;
 }
 
+#register-id {
+  margin-top: 20px;
+}
 /* #register-password {
   margin-bottom: 50px;
 } */
@@ -169,7 +172,7 @@
 
 #backto-login-btn {
   position: fixed;
-  top: 15px;
+  top: 20px;
   left: 37%;
   background-color: rgba(0, 0, 0, 0);
   border: none;
