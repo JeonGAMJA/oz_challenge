@@ -16,6 +16,45 @@
         <span></span>
       </label>
     </div>
+    <i id="chat-icon" class="fa-solid fa-message"></i>
+    <div id="chat">
+      <div id="chat-screen">
+        <div id="chat-column">
+          <div id="chat-header">
+            <button id="chat-backwards-btn"><i class="fa-solid fa-angle-left"></i></button>
+            <span id="chat-room-name">감자전</span>
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div id="chat-message">
+              <div id="chat-message-date">
+                <i class="fa-regular fa-calendar-days"></i>
+                <span>2024년 2월 12일 월요일</span>
+              </div>
+              <div class="chat-message-bubble" id="chat-message-bubble-me">
+                <span id="chat-message-content-me" class="chat-message-content">안녕하세요!</span>
+                <span class="chat-message-time">오후 2:11</span>
+              </div>
+              <div class="chat-message-bubble" id="chat-message-bubble-other">
+                <i class="fa-solid fa-user"></i>
+                <div id="chat-message-content-other-column">
+                  <span>감자전</span>
+                  <span id="chat-message-content-other" class="chat-message-content">안녕하세용</span>
+                </div>
+                <span class="chat-message-time"> 오후 2:12</span>
+              </div>
+          </div>
+          <div id="chat-message-input">
+            <form>
+              <div id="chat-photo-btn">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+              <textarea></textarea>
+              <button id="chat-send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="profile-background"></div>
     <div id="profile">
       <button id="profile-close-btn"><i class="fa-solid fa-xmark"></i></button>
@@ -70,7 +109,7 @@
     <nav id="blog-navbar" class="blog-navbar-close">
       <div id="blog-navbar__column">
         <div id="blog-navbar-btn">
-          <a id="blog-navbar-home-btn" class="slide-nav-btn" href="blog.html">홈</a>
+          <a id="blog-navbar-home-btn" href="blog.html">홈</a>
           <button id="blog-navbar-profile">
             <img
               src="https://www.gimhaemall.kr/thumb/d593060f9bf1cef1b7c8c1e58464c59a/620_620_d19b55a79bc77fcd7c9e6e9811ca.jpg"
@@ -109,12 +148,16 @@
       <section>
         <div class="blog-main-post">
           <img />
-          <a href="challenge/day1_tag.html">day1: 태그 사용해보기</a>
+          <a href="challenge/day1_tag.html">day1-2: 태그 사용해보기</a>
         </div>
         <div class="blog-main-post">
           <img />
-          <a href="challenge/day1_form.html">day1: 설문조사 양식 만들기</a>
+          <a href="challenge/day1_form.html">day1-2: 설문조사 양식 만들기</a>
         </div>
+        <div class="blog-main-post">
+          <a>day3-4: 다이어리 만들기</a>
+        </div>
+        <div class="blog-main-post"><a>day5-6: 눈사람 만들기</a></div>
       </section>
     </main>
     <hr />
@@ -127,5 +170,6 @@
   </body>
   <script src="js/blog.js"></script>
   <script src="js/profile.js"></script>
+  <script src="js/chat.js"></script>
   <script src="https://kit.fontawesome.com/918a7c0be2.js" crossorigin="anonymous"></script>
 </html>
