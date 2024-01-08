@@ -16,15 +16,66 @@
         <span></span>
       </label>
     </div>
+    <div id="profile-background"></div>
+    <div id="profile">
+      <button id="profile-close-btn"><i class="fa-solid fa-xmark"></i></button>
+      <div id="profile-head">
+        <img
+          src="https://www.gimhaemall.kr/thumb/d593060f9bf1cef1b7c8c1e58464c59a/620_620_d19b55a79bc77fcd7c9e6e9811ca.jpg"
+          id="profile-head-photo"
+        />
+        <span id="profile-name">감자전</span>
+        <span id="profile-head-job">웹프론트엔드</span>
+        <div id="profile-follow">
+          <div>
+            <span>팔로워</span>
+            <span>1,234</span>
+          </div>
+          <div>
+            <span>팔로잉</span>
+            <span>1,234</span>
+          </div>
+          <div>
+            <span>좋아요</span>
+            <span>1,234</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="profile-stack">
+        <span>STACK</span>
+        <div id="profile-stack-badge">
+          <div id="html"><i class="fa-brands fa-html5"></i>HTML5</div>
+          <div id="css"><i class="fa-brands fa-css3"></i>CSS3</div>
+        </div>
+      </div>
+      <div id="profile-contact">
+        <span>CONTACT</span>
+        <div id="profile-contact-badge">
+          <a id="velog" href="https://velog.io/@gamjajeon0212/posts"
+            ><img
+              src="https://pbs.twimg.com/profile_images/1228368893321736193/Ov0og7E8_400x400.jpg"
+          /></a>
+          <a id="github" href="https://github.com/JeonGAMJA"
+            ><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+          /></a>
+          <a>
+            <img
+              src="https://i.namu.wiki/i/tG65-erVsROJQYGeZIdOk3otULhJrTa6Nq_F2VEm7_eQ6qZbaLv52ezv5-vA4s56dNA0kw31QPQsK80Y9PVKigiZV-G5GwqXKruj9lRUznQ.svg"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
     <nav id="blog-navbar" class="blog-navbar-close">
       <div id="blog-navbar__column">
         <div id="blog-navbar-btn">
           <a id="blog-navbar-home-btn" class="slide-nav-btn" href="blog.html">홈</a>
-          <div id="blog-navbar-profile">
+          <button id="blog-navbar-profile">
             <img
               src="https://www.gimhaemall.kr/thumb/d593060f9bf1cef1b7c8c1e58464c59a/620_620_d19b55a79bc77fcd7c9e6e9811ca.jpg"
             />
-          </div>
+          </button>
         </div>
         <div id="blog-navbar-menubox" class="slide-nav-menu">
           <form id="blog-navbar-search">
@@ -37,7 +88,7 @@
           </ul>
           <ul class="blog-navbar-menu">
             <li>
-              <a href="#">공부</a>
+              <a href="blog.html">공부</a>
             </li>
             <li>회고</li>
             <li>밥</li>
@@ -75,5 +126,6 @@
     </footer>
   </body>
   <script src="js/blog.js"></script>
+  <script src="js/profile.js"></script>
   <script src="https://kit.fontawesome.com/918a7c0be2.js" crossorigin="anonymous"></script>
 </html>
