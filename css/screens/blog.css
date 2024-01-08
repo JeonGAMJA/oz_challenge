@@ -40,12 +40,14 @@
   height: 100vh;
   position: relative;
   padding: 30px 18vw;
+  box-sizing: border-box;
   background-color: white;
   overflow-y: scroll;
 }
 
 #blog-main section {
-  display: flex;
+  display:flex;
+  flex-wrap: wrap;
 }
 
 .blog-main-post {

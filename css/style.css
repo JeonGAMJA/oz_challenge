@@ -1,4 +1,7 @@
 @import "reset.css";
+/* challenge */
+@import "challenge/diary.css";
+@import "challenge/snowman.css";
 
 /*components*/
 @import "components/navbar.css";

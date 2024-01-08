@@ -1,0 +1,70 @@
+#diary {
+    width: 100vw;
+    height: auto;
+    padding: 3vw;
+    background-color:peru;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+#diary > header {
+    width: 50vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px double black;
+    box-sizing: border-box;
+}
+
+#diary > header >span {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+#diary > main {
+    display: flex;
+    flex-direction: column;
+}
+
+#diary > main > section:first-child {
+    height: 10vh;
+    display:flex;
+    flex-direction: column;
+    align-items: end;    
+}
+
+#diary > main > section:nth-child(2) img {
+    width: 95%;
+    height: auto;
+}
+
+#diary > main > section:last-child {
+    font-size: large;
+    font-weight: 900;
+}
+
+#diary > main > section {
+    width: 50vw;
+    height: auto;
+    border: 5px double black;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2vw;
+    margin: 1vw;
+}
+
+#diary > main > section {
+    display: flex;
+    flex-direction: column;
+}
+
+#diary > footer {
+    font-size: large;
+    font-weight: 900;
+}
