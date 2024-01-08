@@ -3,9 +3,16 @@ const profileCloseBtn = document.getElementById("profile-close-btn");
 const profileBackground = document.getElementById("profile-background");
 const profileBtn = document.getElementById("blog-navbar-profile");
 
-function closeProfile(event) {
+function ClickCloseProfileBtn(event) {
+
   profile.classList.replace("on-profile", "off-profile");
   profileBackground.classList.replace("visible", "hidden");
+}
+function ClickCloseProfileBackground(event) {
+  if (event.currentTarget === profileBackground) {
+    profile.classList.replace("on-profile", "off-profile");
+    profileBackground.classList.replace("visible", "hidden");
+  }
 }
 
 function onProfile(event) {
@@ -24,4 +31,5 @@ function checkProfileClass(event) {
 
 profileBtn.addEventListener("click", onProfile);
 profileBtn.addEventListener("click", checkProfileClass);
-profileCloseBtn.addEventListener("click", closeProfile);
+profileCloseBtn.addEventListener("click", ClickCloseProfileBtn);
+profileBackground.addEventListener("mousedown",ClickCloseProfileBackground)
