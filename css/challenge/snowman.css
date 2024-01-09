@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     background-color: skyblue;
+
 }
 
 #hat {
@@ -15,8 +16,8 @@
 }
 
 #hat > div:first-child{
-    width: 4.5vw;
-    height: 5vw;
+    width: 4vw;
+    height: 4vw;
     background-color:black;
 }
 
@@ -30,16 +31,16 @@
 #head > article {
     width: 6.5vw;
     height: 6.5vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     border-radius: 50%;
     background-color:white;
 }
 
 #head > article > article {
+    position: absolute;
     display: flex;
+    top: 1vw;
+    left: 1.5vw;
 
 }
 
@@ -54,50 +55,65 @@
 #head > article >div {
     width: 2vw;
     height: 0.8vw;
+    position: absolute;
+    top: 2.6vw;
+    left: 2vw;
     background-color: black;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
 }
 
 #body {
-    width: auto;
-    height: auto;
+    width:8.5vw;
+    height:8.5vw;
     position: relative;
+    background-color:white;
+    border-radius: 50%;
+    z-index: 50;
+
 }
 
 #body > article {
-    width:8.5vw;
-    height:8.5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
-    background-color:white;
-    border-radius: 50%;
+    position: absolute;
+    bottom: 1vw;
+    left: 2.9vw;
+    z-index: 99;
+
 }
 
 #body > article > div {
-    width: 0.8vw;
-    height: 0.8vw;
+    width: 0.7vw;
+    height: 0.7vw;
     background-color: black;
     border-radius: 50%;
-    margin: 0.8vw;
+    margin: 0.6vw;
 }
 
-#body > div {
+#leg > div {
     width: 0.5vw;
-    height: 6.5vw;
-    position: absolute;
+    height: 5.5vw;
     background-color: brown;
+    position: absolute;
+    top:-11vw;
 }
 
-#body > div:first-child {
+#leg :first-child {
+    transform:rotate(60deg);
+    right: 0vw;
+}
 
+#leg :last-child {
+    transform:rotate(-60deg);
+    left: 0vw;
 }
 
 #leg {
     width: 10.5vw;
     height: 10.5vw;
+    position: relative;
     background-color: white;
     border-radius: 50%;
 }
