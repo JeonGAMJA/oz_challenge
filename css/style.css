@@ -2,6 +2,7 @@
 /* challenge */
 @import "challenge/diary.css";
 @import "challenge/snowman.css";
+@import "challenge/apple_clone.css";
 
 /*components*/
 @import "components/navbar.css";
