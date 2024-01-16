@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="name"></h1>
+    <p id="hobby"></p>
+    <p id="song"></p>
+  </body>
+  <script>
+    const nameElement = document.querySelector("#name");
+    const hobbyElement = document.querySelector("#hobby");
+    const songElement = document.querySelector("#song");
+
+    let name = window.prompt("당신의 이름은?");
+    let hobby = window.prompt("당신의 취미는?");
+    let song = window.prompt("당신이 가장 좋아하는 노래는?");
+
+    nameElement.textContent = name;
+    hobbyElement.textContent = `취미는 ${hobby}입니다!`;
+    songElement.textContent = `좋아하는 곡은 ${song}입니다!`;
+  </script>
+</html>
