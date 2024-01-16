@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="whitemode-button">white</button>
+    <button id="blackmode-button">dark</button>
+  </body>
+  <script>
+    const whitemodeButton = document.getElementById("whitemode-button");
+    const blackmodeButton = document.getElementById("blackmode-button");
+
+    function whiteMode() {
+      document.querySelector("body").style.backgroundColor = "white";
+    }
+
+    function blackMode() {
+      document.querySelector("body").style.backgroundColor = "black";
+    }
+
+    whitemodeButton.addEventListener("click", whiteMode);
+    blackmodeButton.addEventListener("click", blackMode);
+  </script>
+</html>
