@@ -52,6 +52,66 @@ html {
   list-style: none;
 }
 
+.globalnav-flyout {
+}
+
+@media only screen and (max-width: 833px) {
+  .globalnav .globalnav-item:not(.globalnav-menu .globalnav-item-menu) {
+    width: 48px;
+  }
+
+  .globalnav .globalnav-item-apple {
+    flex-grow: 1;
+    text-align: left;
+    justify-content: left;
+  }
+
+  .globalnav .globalnav-menu {
+    width: 100%;
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .globalnav .globalnav-item-icon {
+    width: fit-content;
+    padding: 0 16px;
+  }
+
+  .globalnav-list {
+    padding: 0;
+  }
+
+  .globalnav .globalnav-list > .globalnav-item {
+    width: 100%;
+  }
+
+  .globalnav .globalnav-menu > .globalnav-flyout {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+    padding-bottom: 0;
+    transform: 0;
+    background-color: transparent;
+  }
+}
+
+@media only screen and (min-width: 834px) {
+  .globalnav .globalnav-flyout {
+    display: inherit;
+  }
+
+  .globalnav .globalnav-menu {
+    display: contents;
+  }
+
+  .globalnav-menutrigger {
+    display: none;
+  }
+}
+
 .globalnav-item-icon {
   width: 30px;
   height: 44px;
@@ -85,6 +145,32 @@ html {
   color: rgb(29, 29, 31);
   font-weight: 400;
   font-size: 11.7px;
+}
+
+.globalnav-menutrigger-button {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  box-sizing: content-box;
+  color: #000;
+  opacity: 0.8;
+  cursor: pointer;
+  outline-offset: -7px;
+}
+
+.globalnav-width-flyout-open {
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 }
 
 .storehome {

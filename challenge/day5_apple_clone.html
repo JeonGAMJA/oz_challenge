@@ -11,41 +11,45 @@
     <div id="paage">
       <div class="globalnav">
         <ul class="globalnav-list">
-          <li class="globalnav-item-icon">
+          <li class="globalnav-item-icon globalnav-item-apple">
             <a href="#">
               <i class="fa-brands fa-apple"></i>
             </a>
           </li>
-          <div class="globalnav-item">
-            <a href="#">스토어</a>
-          </div>
-          <div class="globalnav-item">
-            <a href="#">Mac</a>
-          </div>
-          <div class="globalnav-item">
-            <a href="#">iPad</a>
-          </div>
-          <div class="globalnav-item">
-            <a href="#">iPhone</a>
-          </div>
-          <div class="globalnav-item">
-            <a href="#">Watch</a>
-          </div>
-          <div class="globalnav-item">
-            <a href="#">AirPods</a>
-          </div>
-          <div class="globalnav-item">
-            <a href="#">TV 및 홈</a>
-          </div>
-          <div class="globalnav-item">
-            <a href="#">엔터테인먼트</a>
-          </div>
-          <div class="globalnav-item">
-            <a href="#">액세서리</a>
-          </div>
-          <div class="globalnav-item">
-            <a href="#">고객지원</a>
-          </div>
+          <li id="globalnav-menu" class="globalnav-menu">
+            <div class="globalnav-flyout">
+              <div class="globalnav-item">
+                <a href="#">스토어</a>
+              </div>
+              <div class="globalnav-item">
+                <a href="#">Mac</a>
+              </div>
+              <div class="globalnav-item">
+                <a href="#">iPad</a>
+              </div>
+              <div class="globalnav-item">
+                <a href="#">iPhone</a>
+              </div>
+              <div class="globalnav-item">
+                <a href="#">Watch</a>
+              </div>
+              <div class="globalnav-item">
+                <a href="#">AirPods</a>
+              </div>
+              <div class="globalnav-item">
+                <a href="#">TV 및 홈</a>
+              </div>
+              <div class="globalnav-item">
+                <a href="#">엔터테인먼트</a>
+              </div>
+              <div class="globalnav-item">
+                <a href="#">액세서리</a>
+              </div>
+              <div class="globalnav-item">
+                <a href="#">고객지원</a>
+              </div>
+            </div>
+          </li>
           <li class="globalnav-item-icon">
             <a href="#">
               <i class="fa-solid fa-magnifying-glass"></i>
@@ -57,6 +61,14 @@
             </a>
           </li>
         </ul>
+        <div class="globalnav-menutrigger">
+          <button
+            id="globalnav-menutrigger-button"
+            class="globalnav-menutrigger-button"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
       </div>
       <div class="storehome">
         <section id="ribbon">
@@ -1192,7 +1204,7 @@
       </footer>
     </div>
   </body>
-  <script src="../js/blog.js"></script>
+  <script src="../js/apple_clone.js"></script>
   <script
     src="https://kit.fontawesome.com/918a7c0be2.js"
     crossorigin="anonymous"
