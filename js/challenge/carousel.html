@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .dark-mode {
+        background-color: black;
+      }
+
+      #image {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+      }
+
+      #image-container {
+        width: fit-content;
+        height: 100%;
+        display: flex;
+        transition: transform 0.5s;
+      }
+
+      #image-container > div {
+        width: 300px;
+        height: 300px;
+      }
+
+      #image-container > div:first-child {
+        background-color: red;
+      }
+
+      #image-container > div:nth-child(2) {
+        background-color: green;
+      }
+
+      #image-container > div:last-child {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="image">
+      <div id="image-container">
+        <div>
+          <img id="image1" src="" />
+        </div>
+        <div>
+          <img id="image2" src="" />
+        </div>
+        <div>
+          <img id="image3" src="" />
+        </div>
+      </div>
+    </div>
+    <div id="button-container" style="display: flex">
+      <button id="toggle-mode-button" onclick="toggleMode()">O</button>
+      <button id="prev-button" onclick="prevImage(event)">이전</button>
+      <div>
+        <button id="button1" onclick="moveImage(event)">화</button>
+        <button id="button2" onclick="moveImage(event)">이</button>
+        <button id="button3" onclick="moveImage(event)">팅</button>
+      </div>
+      <button id="next-button" onclick="nextImage(event)">다음</button>
+    </div>
+  </body>
+  <script>
+    const imageContainer = document.getElementById("image-container");
+    let currentTranslate = 0;
+
+    function toggleMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    function moveImage(event) {
+      const nodes = [...event.target.parentElement.children];
+      const index = nodes.indexOf(event.target);
+
+      imageContainer.style.transform = `translateX(${-300 * index}px)`;
+      currentTranslate = -300 * index;
+    }
+
+    function prevImage(event) {
+      if (currentTranslate <= 0) {
+        imageContainer.style.transform = `translateX(${(currentTranslate += 300)}px)`;
+        console.log(currentTranslate);
+      }
+    }
+
+    function nextImage(event) {
+      imageContainer.style.transform = `translateX(${(currentTranslate -= 300)}px)`;
+    }
+  </script>
+</html>
