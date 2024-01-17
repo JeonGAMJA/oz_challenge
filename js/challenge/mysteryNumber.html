@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="guessNumber()">
+      <p>1부터 100사이의 숫자를 입력하세요!</p>
+      <input type="text" id="user-input" />
+      <button id="user-input-button">뚜둥!</button>
+      <p id="system-output"></p>
+    </form>
+  </body>
+  <script>
+    const gameForm = document.querySelector("form");
+    const userInput = document.getElementById("user-input");
+    const userInputButton = document.getElementById("user-input-button");
+    const systemOutput = document.getElementById("system-output");
+    const restartButton = document.createElement("button");
+    const restartButtonText = document.createTextNode("다시하기");
+
+    restartButton.appendChild(restartButtonText);
+
+    const systemNumber = Math.floor(Math.random() * 100);
+
+    console.log(systemNumber);
+
+    function guessNumber() {
+      event.preventDefault();
+
+      const userGuessNumber = userInput.value;
+
+      console.log(userGuessNumber);
+
+      if (userGuessNumber == systemNumber) {
+        alert("정답!");
+        document.body.appendChild(restartButton);
+      }
+      if (userGuessNumber > systemNumber) {
+        systemOutput.textContent = "힌트: 숫자가 커요! 줄여볼까요?";
+      }
+      if (userGuessNumber < systemNumber) {
+        systemOutput.textContent =
+          "힌트! 숫자가 너무 작아요! 조금 더 높여보세요!";
+      }
+    }
+
+    function restart() {
+      location.reload(true);
+    }
+
+    restartButton.addEventListener("click", restart);
+  </script>
+</html>
