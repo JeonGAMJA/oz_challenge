@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="score"></h1>
+  </body>
+  <script>
+    const textBox = document.getElementById("score");
+
+    const score = window.prompt("중간고사 점수를 입력하세요.");
+    let credit = 0;
+
+    if (score >= 90) {
+      credit = "A";
+    }
+    if (79 < score < 90) {
+      credit = "B";
+    }
+    if (69 < score < 80) {
+      credit = "C";
+    }
+    if (59 < score < 70) {
+      credit = "D";
+    }
+    if (score < 60) {
+      credit = "F";
+    }
+
+    textBox.textContent = `나의 기말고사 점수는 ${score}점, 학점은 ${credit}!!!`;
+  </script>
+</html>
