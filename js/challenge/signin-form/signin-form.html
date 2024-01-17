@@ -36,11 +36,15 @@
     </style>
   </head>
   <body>
-    <div id="signin-form">
-      <input type="email" placeholder="이메일" />
-      <input type="text" placeholder="이름" />
-      <input type="password" placeholder="비밀번호" />
-      <input type="confirm-password" placeholder="비밀번호 확인" />
+    <form id="signin-form" onsubmit="printUserData()">
+      <input id="email" type="email" placeholder="이메일" />
+      <input id="name" type="text" placeholder="이름" />
+      <input id="password" type="password" placeholder="비밀번호" />
+      <input
+        id="confirm-password"
+        type="confirm-password"
+        placeholder="비밀번호 확인"
+      />
       <div id="phone">
         <input type="tel" placeholder="000" />
         -
@@ -66,7 +70,7 @@
           <button>인증 완료</button>
         </div>
       </div>
-      <input type="tel" />
+      <input type="number" />
       <div style="display: flex; align-items: center">
         <input
           id="female"
@@ -94,6 +98,7 @@
       >
         가입하기
       </button>
-    </div>
+    </form>
   </body>
+  <script src="signin-forn.js"></script>
 </html>
