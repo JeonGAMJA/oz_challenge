@@ -20,7 +20,13 @@
 
 function question(n) {
   // 여기에서 코드 작성해주세요!
-  let result;
+  let result = 0;
+
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 == 0) {
+      result += i;
+    }
+  }
 
   return result;
 }
