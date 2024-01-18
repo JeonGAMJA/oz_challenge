@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      style="width: 300px; display: flex; flex-direction: column"
+      onsubmit="printUserInfo()"
+    >
+      <label for="user-id-input"
+        >아이디 <input id="user-id-input" placeholder="아이디"
+      /></label>
+
+      <label for="user-password-input"
+        >비밀번호 <input id="user-password-input" placeholder="비밀번호"
+      /></label>
+
+      <label for="user-password-confirmation-input"
+        >비밀번호 확인
+        <input
+          id="user-password-confirmation-input"
+          placeholder="비밀번호 확인"
+      /></label>
+
+      <label for="user-name-input"
+        >이름 <input id="user-name-input" placeholder="사용자 이름"
+      /></label>
+
+      <label for="user-phone-input"
+        >전화번호 <input id="user-phone-input" placeholder="휴대전화 번호"
+      /></label>
+
+      <label for="user-position-input"
+        >원하는 직무 <input id="user-position-input"
+      /></label>
+
+      <div id="user-gender-input" style="display: flex">
+        <label for="user-gender-input">성별 </label>
+        <label for="user"></label> <input id="user" />
+        <label for="user"></label> <input id="user" />
+      </div>
+
+      <label for="use-email-input"
+        >이메일 <input id="user-email-input" placeholder="이메일@ozcoding.com"
+      /></label>
+
+      <label for="user-intro-input"
+        >자기소개 <textarea id="user-intro-input"></textarea>
+      </label>
+      <button id="sign-in-btn">가입</button>
+      <button type="button" id="reset-btn" onclick="reset()">리셋</button>
+    </form>
+  </body>
+</html>
