@@ -5,7 +5,7 @@ const userPosition = document.getElementById("user-position-input");
 
 function printUserInfo(event) {
   event.preventDefault();
-  alert(`${userId}님 환영합니다.`);
+  alert(`${userId.value}님 환영합니다.`);
   alert(
     `회원가입시 입력하신 내역은 다음과 같습니다.\n 아이디 : ${userId.value}\n 이름 : ${userName.value}\n 전화번호 : ${userPhone.value}\n 원하는 직무 : ${userPosition.value}`
   );

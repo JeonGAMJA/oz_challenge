@@ -8,7 +8,7 @@
   <body>
     <form
       style="width: 300px; display: flex; flex-direction: column"
-      onsubmit="printUserInfo()"
+      onsubmit="printUserInfo(event)"
     >
       <label for="user-id-input"
         >아이디 <input id="user-id-input" placeholder="아이디"
@@ -54,4 +54,5 @@
       <button type="button" id="reset-btn" onclick="reset()">리셋</button>
     </form>
   </body>
+  <script src="signin-form.js"></script>
 </html>
