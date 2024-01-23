@@ -8,16 +8,27 @@
   <body>
     <h1>구구단표</h1>
     <h3>2단~9단을 만들어보세요!</h3>
-    <span> </span>
+    <table>
+      <tr id="thead"></tr>
+      <tr id="tbody"></tr>
+    </table>
   </body>
   <script>
-    for (let i = 1; i < 10; i++) {
-      document.write(`${i}단`);
-      document.write("<br>");
-      for (let j = 1; j < 10; j++) {
-        document.write(`${i}x${j}=${i * j}\n`);
-        document.write("<br>");
+    const table = document.querySelector("table");
+    const tbody = document.getElementById("tbody");
+
+    for (let i = 2; i <= 9; i++) {
+      let row = document.createElement("td");
+      let thead = document.createElement("tr");
+      thead.textContent = i + "단";
+      row.appendChild(thead);
+
+      for (let j = 1; j <= 9; j++) {
+        let cell = document.createElement("tr");
+        cell.textContent = `${i}x${j}=${i * j}`;
+        row.appendChild(cell);
       }
+      tbody.appendChild(row);
     }
   </script>
 </html>
