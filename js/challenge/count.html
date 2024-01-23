@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="current-time">현재 날짜와 시간:</h1>
+    <h1 id="remaining-time"></h1>
+  </body>
+  <script>
+    function dday() {
+      const remainingTime = document.getElementById("remaining-time");
+      const newYear = new Date("2025-01-01");
+      const today = new Date();
+      const diff = newYear - today;
+
+      const diffMonth = String(
+        Math.floor(diff / (1000 * 60 * 60 * 24 * 30))
+      ).padStart(2, "0");
+      const diffDay = String(
+        Math.floor((diff / (1000 * 60 * 60 * 24)) % 30)
+      ).padStart(2, "0");
+      const diffHour = String(
+        Math.floor((diff / (1000 * 60 * 60)) % 24)
+      ).padStart(2, "0");
+      const diffMinuites = String(
+        Math.floor((diff / (1000 * 60)) % 60)
+      ).padStart(2, "0");
+      const diffSeconds = String(Math.floor((diff / 1000) % 60)).padStart(
+        2,
+        "0"
+      );
+
+      remainingTime.innerText = `올해의 남은 시간 : ${diffMonth}개월 ${diffDay}일 ${diffHour}시간 ${diffMinuites}분 ${diffSeconds}초`;
+    }
+
+    function today() {
+      const currentTime = document.getElementById("current-time");
+      const today = new Date();
+
+      currentTime.innerText = `현재 날짜와 시간: ${today}`;
+    }
+    dday();
+    setInterval(dday, 1000);
+    today();
+    setInterval(today, 1000);
+  </script>
+</html>
