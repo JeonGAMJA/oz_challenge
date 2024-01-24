@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>⏰스톱워치⏰</h1>
+    <span id="time">00:00.00</span>
+    <div>
+      <button id="start" onclick="startWatch()">start</button>
+      <button id="stop" onclick="stopWatch()">stop</button>
+      <button id="reset" onclick="resetWatch()">reset</button>
+    </div>
+  </body>
+  <script>
+    const watch = document.getElementById("time");
+    let milliseconds = 0;
+    let seconds = 0;
+    let minuites = 0;
+    let start;
+
+    function getTime() {
+      milliseconds++;
+      if (milliseconds > 99) {
+        seconds++;
+        milliseconds = 0;
+      }
+      if (seconds > 59) {
+        minuites++;
+        seconds = 0;
+      }
+
+      printTime();
+    }
+
+    function printTime() {
+      watch.textContent = `${String(minuites).padStart(2, "0")}:${String(
+        seconds
+      ).padStart(2, "0")}.${String(milliseconds).padStart(2, "0")}`;
+    }
+
+    function startWatch() {
+      start = setInterval(getTime, 10);
+    }
+
+    function stopWatch() {
+      clearInterval(start);
+    }
+
+    function resetWatch() {
+      clearInterval(start);
+      milliseconds = 0;
+      seconds = 0;
+      minuites = 0;
+      printTime();
+    }
+  </script>
+</html>
