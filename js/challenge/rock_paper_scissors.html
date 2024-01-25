@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>가의바위보 게임</h1>
+    <p>가위,바위,보 중 하나를 입력하세요:</p>
+    <form>
+      <input type="text" id="user" />
+      <button onclick="printResult()">결과 확인</button>
+    </form>
+    <p id="result"></p>
+  </body>
+  <script>
+    function getUserChoice() {
+      event.preventDefault();
+      const userChoice = document.getElementById("user").value;
+      return userChoice;
+    }
+
+    function getComputerChoice() {
+      const rockPaperScissors = ["가위", "바위", "보"];
+      const random = Math.floor(Math.random() * 3);
+      console.log(random);
+
+      return rockPaperScissors[random];
+    }
+    function determineWinner() {
+      const userChoice = getUserChoice();
+      const computerChoice = getComputerChoice();
+      let result = "";
+
+      if (userChoice == computerChoice) {
+        result = "비겼습니다";
+      }
+      if (
+        userChoice + computerChoice == "가위보" ||
+        userChoice + computerChoice == "보바위" ||
+        userChoice + computerChoice == "바위가위"
+      ) {
+        result = "이겼습니다";
+      }
+      if (
+        userChoice + computerChoice == "보가위" ||
+        userChoice + computerChoice == "바위보" ||
+        userChoice + computerChoice == "가위바위"
+      ) {
+        result = "졌습니다";
+      }
+
+      return [userChoice, computerChoice, result];
+    }
+
+    function printResult() {
+      let [userChoice, computerChoice, result] = determineWinner();
+
+      document.getElementById(
+        "result"
+      ).textContent = `당신의 선택:${userChoice} / 컴퓨터의 선택: ${computerChoice} / 결과: ${result}!`;
+
+      userChoice = "";
+      computerChoice = "";
+      result = "";
+    }
+  </script>
+</html>
