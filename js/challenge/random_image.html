@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="width: 300px; height: 300px; background-color: pink"></div>
+    <button onclick="clickStopBtn()">멈춰!</button>
+  </body>
+  <script>
+    function backgroundColor() {
+      const background = document.querySelector("div");
+      const colors = ["red", "green", "blue", "pink", "yellow", "purple"];
+      const backgroundColor = colors[Math.floor(Math.random() * 6)];
+
+      background.style.backgroundColor = backgroundColor;
+    }
+
+    const changeBackground = setInterval(backgroundColor, 1000);
+
+    function clickStopBtn() {
+      console.log("stop");
+      clearInterval(changeBackground);
+    }
+  </script>
+</html>
