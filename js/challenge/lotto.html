@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>로또 추첨</h1>
+    <ul></ul>
+    <button id="lottery" onclick="clickLotteryBtn()">추첨</button>
+    <button id="retry" onclick="clickResetBtn()">다시</button>
+  </body>
+  <script>
+    const lotteryNumberList = document.querySelector("ul");
+    let number = [];
+    let lotteryNumberListItem;
+
+    function getLotteryNumber() {
+      number = [];
+      for (let i = 0; i < 6; i++) {
+        lotteryNumbers = Math.floor(Math.random() * (45 - 1) + 1);
+        number.push(lotteryNumbers);
+      }
+    }
+
+    function printLotteryNumbers() {
+      getLotteryNumber();
+      number.map(function (ele) {
+        lotteryNumberListItem = document.createElement("li");
+        lotteryNumberListItem.textContent = ele;
+        lotteryNumberList.appendChild(lotteryNumberListItem);
+      });
+    }
+
+    function removeLotteryList() {
+      number = [];
+      lotteryNumberList.replaceChildren();
+    }
+
+    function clickLotteryBtn() {
+      removeLotteryList();
+      printLotteryNumbers();
+
+      console.log(number);
+    }
+
+    function clickResetBtn() {
+      removeLotteryList();
+    }
+  </script>
+</html>
