@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="addBtn" onclick="clickAddBtn()">아이스크림 목록 추가</button>
+    <button id="printNameBtn" onclick="clickPrintNameBtn()">
+      아이스크림 이름 출력
+    </button>
+    <button id="printIcecreamListBtn" onclick="clickPrintListBtn()">
+      입력한 아이스크림 목록 출력
+    </button>
+    <h1>입력한 아이스크림 목록:</h1>
+  </body>
+  <script>
+    let icecreams = [];
+
+    function clickAddBtn() {
+      icecreams.push(
+        window.prompt("추가하고 싶은 아이스크림의 이름을 입력해주세요.")
+      );
+      return icecreams;
+    }
+
+    console.log(icecreams);
+
+    function clickPrintNameBtn() {
+      for (let i = 0; i < icecreams.length; i++) {
+        window.alert(`${icecreams[i]}`);
+      }
+    }
+    function clickPrintListBtn() {
+      const icecreamsList = document.createElement("h1");
+
+      icecreamsList.textContent = `${icecreams.join(", ")}`;
+      document.body.appendChild(icecreamsList);
+    }
+  </script>
+</html>
