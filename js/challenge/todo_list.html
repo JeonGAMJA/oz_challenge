@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>TO DO LIST</h1>
+    <ul></ul>
+    <form onsubmit="printTodoList(event)">
+      <input type="text" />
+      <button>추가</button>
+    </form>
+  </body>
+  <script>
+    let todoArr = []
+
+    function createTodoList(event) {
+      event.preventDefault()
+      const todoForm = document.querySelector('form')
+
+      const todoListItem = {
+        todoText: todoForm.querySelector('input').value,
+        todoId: new Date().getTime(),
+        todoDone: false,
+      }
+      todoArr.push(todoListItem)
+      todoForm.querySelector('input').value = ''
+      printTodoList()
+    }
+
+    function printTodoList(event) {
+      const todoList = document.querySelector('ul')
+      const todoArr = createTodoList(event)
+
+      todoList.innerHTML = ''
+
+      todoArr.forEach(function (todoListItem) {
+        const todoItem = document.createElement('li')
+        const todoDelBtn = document.createElement('span')
+        todoItem.textContent = todoListItem.todoText
+        todoDelBtn.textContent = '❌'
+        todoItem.title = '클릭하면 완료됨'
+        if (todoListItem.todoDone) {
+          todoItem.style.color = 'skyblue'
+        } else {
+          todoItem.style.color = 'black'
+        }
+
+        todoDelBtn.title = '클릭하면 삭제됨'
+        todoItem.addEventListener('click', function () {
+          handleTodoItemClick(todoListItem.todoId)
+        })
+
+        todoItem.appendChild(todoDelBtn)
+        todoList.appendChild(todoItem)
+      })
+    }
+
+    function handleTodoItemClick(clickedId) {
+      todoArr = todoArr.map(function (todoListItem) {
+        if (todoListItem.todoId === clickedId) {
+          return {
+            ...todoListItem,
+            todoDone: !todoListItem.todoDone,
+          }
+        } else {
+          return todoListItem
+        }
+      })
+      printTodoList(event)
+    }
+  </script>
+</html>

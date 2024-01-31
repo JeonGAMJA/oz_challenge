@@ -12,30 +12,21 @@
     <button id="retry" onclick="clickResetBtn()">다시</button>
   </body>
   <script>
+    const lotteryNumberList = document.querySelector("ul");
+    let number = [];
     let lotteryNumberListItem;
 
     function getLotteryNumber() {
-      let number = [];
+      number = [];
       for (let i = 0; i < 6; i++) {
         lotteryNumbers = Math.floor(Math.random() * (45 - 1) + 1);
         number.push(lotteryNumbers);
       }
-      return number;
     }
 
     function printLotteryNumbers() {
-      const lotteryNumberList = document.querySelector("ul");
-      const numbers = getLotteryNumber();
-
-      //   numbers.reduce((acc, cur) => {
-      //     const listItem = document.createElement("li");
-      //     listItem.textContent = cur;
-      //     acc.appendChild(listItem);
-
-      //     return acc;
-      //   }, lotteryNumberList);
-
-      numbers.forEach(function (ele) {
+      getLotteryNumber();
+      number.map(function (ele) {
         lotteryNumberListItem = document.createElement("li");
         lotteryNumberListItem.textContent = ele;
         lotteryNumberList.appendChild(lotteryNumberListItem);
