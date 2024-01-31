@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>떡잎 유치원 멀리뛰기 결과</h1>
+    <table id="resultTable">
+      <thead>
+        <tr id="thead"></tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <script>
+      function getStudentsInfo() {
+        const students = ['짱구', '맹구', '철수', '훈이', '유리', '수지']
+        let studentsInfo = {}
+
+        students.map(function (student) {
+          studentsInfo[student] = Math.floor(Math.random() * 100)
+        })
+
+        return studentsInfo
+      }
+
+      function printStudentsInfo() {
+        const studentsInfo = getStudentsInfo()
+        const thead = document.getElementById('thead')
+        const tbody = document.getElementById('tbody')
+
+        // 테이블 헤더 생성
+        for (let student in studentsInfo) {
+          let headerCell = document.createElement('th')
+          headerCell.textContent = student
+          thead.appendChild(headerCell)
+        }
+
+        // 테이블 본문 생성
+        let dataRow = document.createElement('tr')
+        for (let student in studentsInfo) {
+          let dataCell = document.createElement('td')
+          dataCell.textContent = studentsInfo[student]
+          dataRow.appendChild(dataCell)
+        }
+        tbody.appendChild(dataRow)
+      }
+
+      // 결과 테이블 생성
+      printStudentsInfo()
+    </script>
+  </body>
+</html>
